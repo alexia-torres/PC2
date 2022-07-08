@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Detalle de Producto</title>
+    </head>
+    <body>
+        <div class="container">
+            <h3><a href="/usuarios">Lista de Productos</a></h3>
+            <h1>Detalle de Producto</h1>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Codigo</td>
+                        <td>{{ usuario.codigo }}</td>
+                    </tr>
+                    <tr>
+                        <td>Descripcion</td>
+                        <td>{{ usuario.descripcion }}</td>
+                    </tr>
+                    <tr>
+                        <td>Precio</td>
+                        <td>{{ usuario.precio }}</td>
+                    </tr>
+                    <tr>
+                        <td>Stock</td>
+                        <td>{{ usuario.stock }}</td>
+                    </tr>
+                    <tr>
+                        <td>Marca</td>
+                        <td>{{ usuario.marca }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3><a href="/usuarios/edit/{{ usuario._id }}">EDIT</a></h3>
+            <form action="/usuarios/delete/{{ usuario._id }}" method="post">
+                <button type="submit">DELETE</button>
+            </form>
+        </div>
+    </body>
+</html>
